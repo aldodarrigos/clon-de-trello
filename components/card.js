@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Card({text, id, setDraggedCard, setRemoveCard}) {
+export default function Card({text, id, setDraggedCard, setPositionList, positionList, setPositionCard, positionCard}) {
 
   function handleClick(){
     console.log(id)
@@ -12,7 +12,9 @@ export default function Card({text, id, setDraggedCard, setRemoveCard}) {
       text: text,
       id: id
     });
-    setRemoveCard(id)
+    
+    setPositionCard(positionCard)
+    setPositionList(positionList)
 
   }
 
