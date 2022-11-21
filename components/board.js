@@ -41,11 +41,6 @@ function handleDrop(e){
     if('classList' in el) classes = el.classList.value;
     if(classes.includes('list')) targetDrop = el.getAttribute('data-id');
   });
-
-  // let cardRemoved = listOfLists.find( el => el.id == removeCard);
-  // listOfLists.keys.forEach( (el) => {
-  //     console.log(el.id)
-  // })
   
   let itemListRemove, positionListRemove;
   for (const prop in listOfLists){
@@ -57,10 +52,7 @@ function handleDrop(e){
       } 
     })   
   }
-
-
-  console.log(itemListRemove)
-
+  
   const listOfListClone = structuredClone( listOfLists );
     listOfListClone[itemListRemove].splice(positionListRemove,1);
     listOfListClone[targetDrop].push(draggedCard);
